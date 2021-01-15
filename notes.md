@@ -10,6 +10,34 @@
 - [ ] build log in feature
 - [ ] build log out feature
 
+# Routes
+
+- User
+  - show => users/1
+
+- Routine
+  - index => routines/
+  - show => routines/1
+  - new => routines/new
+  - edit => routines/1/edit
+  - destroy => routines/1/destroy
+
+- Instrument
+  - index => instruments/
+  - show => instruments/1
+
+- Item
+  - index => routines/1/items
+  - show => routines/1/items/1
+  - new => routines/1/items/new
+  - edit => routines/1/items/1/edit
+  - destroy => routines/1/items/1/destroy
+
+- Note
+  - show => routines/1/items/1/notes/1
+  - new => routines/1/items/1/notes/new
+  - edit => routines/1/items/1/notes/1/edit
+  - destroy => routines/1/items/1/notes/1/destroy
 
 
 # Models & Attributes
