@@ -1,8 +1,8 @@
 # Sprints
 
 ## Sprint 1
-- [ ] set up models with attributes and associations
-- [ ] test model relationships in console
+- [x] set up models with attributes and associations
+- [x] test model relationships in console
 
 ## Sprint 2
 - [ ] set up sessions route and controller
