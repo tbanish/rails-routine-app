@@ -1,3 +1,17 @@
+# Sprints
+
+## Sprint 1
+- [ ] set up models with attributes and associations
+- [ ] test model relationships in console
+
+## Sprint 2
+- [ ] set up sessions route and controller
+- [ ] build sign up feature
+- [ ] build log in feature
+- [ ] build log out feature
+
+
+
 # Models & Attributes
 
 - User
