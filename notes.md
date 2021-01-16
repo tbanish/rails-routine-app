@@ -5,6 +5,7 @@
 - [x] test model relationships in console
 
 ## Sprint 2
+- [ ] create seed data
 - [ ] set up sessions route and controller
 - [ ] build sign up feature
 - [ ] build log in feature
