@@ -11,6 +11,15 @@
 - [x] build log in feature
 - [x] build log out feature
 
+## Sprint 3
+- [ ] build instrument index route
+- [ ] build instrument show route
+- [ ] build routine index route
+- [ ] build routine show route
+- [ ] build routine new route
+- [ ] build routine edit route
+- [ ] build routine destroy route
+
 # Routes
 
 - User
