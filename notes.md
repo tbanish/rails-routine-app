@@ -7,7 +7,7 @@
 ## Sprint 2
 - [x] create seed data
 - [x] set up sessions route and controller
-- [ ] build sign up feature
+- [x] build sign up feature
 - [x] build log in feature
 - [x] build log out feature
 
