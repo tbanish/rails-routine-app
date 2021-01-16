@@ -9,7 +9,7 @@
 - [x] set up sessions route and controller
 - [ ] build sign up feature
 - [x] build log in feature
-- [ ] build log out feature
+- [x] build log out feature
 
 # Routes
 
