@@ -13,4 +13,10 @@ class ItemsController < ApplicationController
     @routine = Routine.find_by(id: params[:routine_id])
     @item = @routine.items.build
   end
+
+  private
+
+  def item_params
+    params.require(:item).permit(:name, :description, :goal, :routine_id)
+  end
 end
