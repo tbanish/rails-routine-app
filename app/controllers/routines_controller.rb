@@ -38,6 +38,12 @@ class RoutinesController < ApplicationController
     end
   end
 
+  def destroy
+    @routine = Routine.find_by(id: params[:id])
+    @routine.destroy
+    redirect_to routines_path
+  end
+
   private
 
   def routine_params
