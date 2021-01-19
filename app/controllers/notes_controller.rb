@@ -4,4 +4,10 @@ class NotesController < ApplicationController
     @item = Item.find_by(id: params[:item_id])
     @note = Note.find_by(id: params[:id])
   end
+
+  private
+
+  def note_params
+    params.require(:note).permit(:content, :item_id)
+  end
 end
