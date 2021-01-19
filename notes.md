@@ -30,8 +30,8 @@
 ## Sprint 5
 - [x] build note show route
 - [x] build note new route
-- [ ] build note edit route
-- [ ] build note destroy route
+- [x] build note edit route
+- [x] build note destroy route
 
 # Routes
 
