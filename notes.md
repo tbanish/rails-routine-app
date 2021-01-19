@@ -15,7 +15,7 @@
 - [x] build instrument index route
 - [x] build instrument show route
 - [x] build routine index route
-- [ ] build routine show route
+- [x] build routine show route
 - [ ] build routine new route
 - [ ] build routine edit route
 - [ ] build routine destroy route
