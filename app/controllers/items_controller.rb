@@ -29,6 +29,18 @@ class ItemsController < ApplicationController
     @item = Item.find_by(id: params[:id])
   end
 
+  def update
+    @routine = Routine.find_by(id: params[:routine_id])
+    @item = Item.find_by(id: params[:id])
+    @item.update(item_params)
+
+    if @item.save
+      redirect_to routine_item_path(@routine, @item)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def item_params
