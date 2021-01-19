@@ -18,7 +18,7 @@
 - [x] build routine show route
 - [x] build routine new route
 - [x] build routine edit route
-- [ ] build routine destroy route
+- [x] build routine destroy route
 
 # Routes
 
