@@ -7,6 +7,11 @@ class RoutinesController < ApplicationController
     @routine = Routine.find_by(id: params[:id])
   end
 
+  def new
+    @routine = Routine.new
+    @routine.build_instrument
+  end
+
   private
 
   def routine_params
