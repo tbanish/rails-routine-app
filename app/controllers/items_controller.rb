@@ -24,6 +24,11 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @routine = Routine.find_by(id: params[:routine_id])
+    @item = Item.find_by(id: params[:id])
+  end
+
   private
 
   def item_params
