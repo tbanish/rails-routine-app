@@ -42,6 +42,15 @@ class NotesController < ApplicationController
     end
   end
 
+  def destroy
+    @note = Note.find_by(id: params[:id])
+    @routine = Routine.find_by(id: params[:routine_id])
+    @item = Item.find_by(id: params[:item_id])
+    @note.destroy
+
+    redirect_to routine_item_path(@routine, @item)
+  end
+
   private
 
   def note_params
