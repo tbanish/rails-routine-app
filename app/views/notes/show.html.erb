@@ -1,3 +1,5 @@
 <h1><%= @item.name %> Note: <%= @note.created_at %></h1>
 
-<%= @note.content %>
+<p><%= link_to "delete note", routine_item_note_path(@routine, @item, @note), method: :delete %></p>
+
+<p><%= @note.content %></p>
