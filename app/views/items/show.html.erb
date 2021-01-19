@@ -1,0 +1,11 @@
+<h1><%= @routine.name %>: <%= @item.name %></h1>
+
+<p><%= @item.name %></p>
+<p><%= @item.description %></p>
+<p><%= @item.goal %></p>
+
+<h3>Notes</h3>
+
+<% @item.notes.each do |note| %>
+  <li><%= note.created_at %> - <%= note.content %></li>
+<% end %>
