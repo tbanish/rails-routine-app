@@ -1,5 +1,7 @@
 <h1><%= @routine.name %>: <%= @item.name %></h1>
 
+<%= link_to "delete item", routine_item_path(@routine, @item), method: :delete %>
+
 <p><%= @item.name %></p>
 <p><%= @item.description %></p>
 <p><%= @item.goal %></p>
