@@ -27,6 +27,17 @@ class RoutinesController < ApplicationController
     @routine = Routine.find_by(id: params[:id])
   end
 
+  def update
+    @routine = Routine.find_by(id: params[:id])
+    @routine.update(routine_params)
+
+    if @routine.save
+      redirect_to routine_path(@routine)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def routine_params
