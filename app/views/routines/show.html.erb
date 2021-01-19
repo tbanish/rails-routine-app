@@ -1,5 +1,7 @@
 <h1><%= @routine.name %></h1>
 
+<%= link_to "delete routine", routine_path(@routine), method: :delete %>
+
 <% @routine.items.each do |item| %>
   <li><%= item.name %></li>
 <% end %>
