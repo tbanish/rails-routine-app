@@ -22,7 +22,7 @@
 
 ## Sprint 4
 - [x] build item index route
-- [ ] build item show route
+- [x] build item show route
 - [ ] build item new route
 - [ ] build item edit route
 - [ ] build item destroy route
