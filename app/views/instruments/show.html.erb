@@ -1,0 +1,7 @@
+<h1><%= @instrument.name %></h1>
+
+<h3>Routines</h3>
+
+<% @instrument.routines.each do |routine| %>
+  <li><%= routine.name %></li>
+<% end %>
