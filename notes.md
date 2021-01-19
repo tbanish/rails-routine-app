@@ -20,6 +20,19 @@
 - [x] build routine edit route
 - [x] build routine destroy route
 
+## Sprint 4
+- [ ] build item index route
+- [ ] build item show route
+- [ ] build item new route
+- [ ] build item edit route
+- [ ] build item destroy route
+
+## Sprint 5
+- [ ] build note show route
+- [ ] build note new route
+- [ ] build note edit route
+- [ ] build note destroy route
+
 # Routes
 
 - User
