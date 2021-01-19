@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   resources :notes
-  resources :items
   resources :instruments
-  resources :routines
+  resources :routines do
+    resources :items
+  end
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
