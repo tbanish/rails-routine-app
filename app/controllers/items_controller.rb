@@ -14,6 +14,16 @@ class ItemsController < ApplicationController
     @item = @routine.items.build
   end
 
+  def create
+    @routine = Routine.find_by(id: params[:routine_id])
+    @item = Item.new(item_params)
+    if @item.save
+      redirect_to routine_items_path(@routine)
+    else
+      redirect_to :new
+    end
+  end
+
   private
 
   def item_params
