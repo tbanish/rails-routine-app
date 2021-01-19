@@ -11,6 +11,18 @@ class NotesController < ApplicationController
     @note = Note.new
   end
 
+  def create
+    @routine = Routine.find_by(id: params[:routine_id])
+    @item = Item.find_by(id: params[:item_id])
+    @note = Note.new(note_params)
+
+    if @note.save
+      redirect_to routine_item_path(@routine, @item)
+    else
+      render :new
+    end
+  end
+
   private
 
   def note_params
