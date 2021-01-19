@@ -1,0 +1,23 @@
+<h1>Edit Routine: <%= @routine.name %></h1>
+
+<%= form_for(@routine) do |f| %>
+  <div class="">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <br>
+  <div class="">
+    <h2>Select an instrument:</h2>
+    <%= f.collection_select(:instrument_id, Instrument.all, :id, :name, prompt: true) %>
+  </div>
+  <br>
+  <div class="">
+    <h2>Or create a new one below:</h2>
+    <%= f.fields_for(:instrument) do |i| %>
+      <%= i.label :name %>
+      <%= i.text_field :name, :value => "" %>
+    <% end %>
+  </div>
+  <br>
+  <%= f.submit %>
+<% end %>
