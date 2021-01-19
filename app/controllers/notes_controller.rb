@@ -23,6 +23,12 @@ class NotesController < ApplicationController
     end
   end
 
+  def edit
+    @routine = Routine.find_by(id: params[:routine_id])
+    @item = Item.find_by(id: params[:item_id])
+    @note = Note.find_by(id: params[:id])
+  end
+
   private
 
   def note_params
