@@ -41,6 +41,13 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @routine = Routine.find_by(id: params[:routine_id])
+    @item = Item.find_by(id: params[:id])
+    @item.destroy
+    redirect_to routine_items_path(@routine)
+  end
+
   private
 
   def item_params
