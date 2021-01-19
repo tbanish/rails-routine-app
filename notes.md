@@ -24,7 +24,7 @@
 - [x] build item index route
 - [x] build item show route
 - [x] build item new route
-- [ ] build item edit route
+- [x] build item edit route
 - [ ] build item destroy route
 
 ## Sprint 5
