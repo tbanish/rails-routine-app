@@ -12,6 +12,17 @@ class RoutinesController < ApplicationController
     @routine.build_instrument
   end
 
+  def create
+    @routine = Routine.new(routine_params)
+    @routine.user_id = current_user.id
+
+    if @routine.save
+      redirect_to routine_path(@routine)
+    else
+      render :new
+    end
+  end
+
   private
 
   def routine_params
