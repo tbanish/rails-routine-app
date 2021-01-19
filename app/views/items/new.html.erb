@@ -1,0 +1,21 @@
+<h1>Add Item to: <%= @routine.name %></h1>
+
+<%= form_for(@item, url: routine_items_path(@routine)) do |f| %>
+  <div class="">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <br>
+  <div class="">
+    <%= f.label :description %>
+    <%= f.text_area :description, size: "30x10"  %>
+  </div>
+  <br>
+  <div class="">
+    <%= f.label :goal %>
+    <%= f.text_area :goal, size: "30x5"  %>
+  </div>
+  <br>
+  <%= f.hidden_field :routine_id %>
+  <%= f.submit "add item" %>
+<% end %>
