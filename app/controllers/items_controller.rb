@@ -8,4 +8,9 @@ class ItemsController < ApplicationController
     @item = Item.find_by(id: params[:id])
     @routine = Routine.find_by(id: params[:routine_id])
   end
+
+  def new
+    @routine = Routine.find_by(id: params[:routine_id])
+    @item = @routine.items.build
+  end
 end
