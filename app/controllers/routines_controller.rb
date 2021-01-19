@@ -6,4 +6,10 @@ class RoutinesController < ApplicationController
   def show
     @routine = Routine.find_by(id: params[:id])
   end
+
+  private
+
+  def routine_params
+    params.require(:routine).permit(:name, :instrument_id, instrument_attributes: [:name])
+  end
 end
