@@ -13,7 +13,7 @@
 
 ## Sprint 3
 - [x] build instrument index route
-- [ ] build instrument show route
+- [x] build instrument show route
 - [ ] build routine index route
 - [ ] build routine show route
 - [ ] build routine new route
