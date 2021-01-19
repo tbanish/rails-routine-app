@@ -12,7 +12,7 @@
 - [x] build log out feature
 
 ## Sprint 3
-- [ ] build instrument index route
+- [x] build instrument index route
 - [ ] build instrument show route
 - [ ] build routine index route
 - [ ] build routine show route
