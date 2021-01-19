@@ -1,0 +1,9 @@
+<h1><%= @routine.name %> Items</h1>
+
+<% @items.each do |item| %>
+  <div class="">
+    <li><%= item.name %></li>
+    <p><%= item.description %></p>
+    <p><%= item.goal %></p>
+  </div>
+<% end %>
