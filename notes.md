@@ -21,7 +21,7 @@
 - [x] build routine destroy route
 
 ## Sprint 4
-- [ ] build item index route
+- [x] build item index route
 - [ ] build item show route
 - [ ] build item new route
 - [ ] build item edit route
