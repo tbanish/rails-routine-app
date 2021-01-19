@@ -25,7 +25,7 @@
 - [x] build item show route
 - [x] build item new route
 - [x] build item edit route
-- [ ] build item destroy route
+- [x] build item destroy route
 
 ## Sprint 5
 - [ ] build note show route
