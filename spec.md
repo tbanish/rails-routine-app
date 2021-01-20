@@ -36,11 +36,11 @@ routines/1/items/1
 - [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
 routines/1/items/new
 
+- [x] Include third party signup/login (how e.g. Devise/OmniAuth)
+
 - [ ] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
 
 - [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
 
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
 
