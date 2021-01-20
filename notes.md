@@ -33,6 +33,9 @@
 - [x] build note edit route
 - [x] build note destroy route
 
+## Sprint 6
+- [ ] set up omniauth
+
 # Routes
 
 - User
