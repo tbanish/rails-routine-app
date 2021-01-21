@@ -1,4 +1,6 @@
 class RoutinesController < ApplicationController
+  before_action :require_login, only: [:index, :show, :new, :edit]
+
   def index
     @routines = current_user.routines
   end
