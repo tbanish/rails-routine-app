@@ -3,7 +3,12 @@ class ItemsController < ApplicationController
 
   def index
     @routine = Routine.find_by(id: params[:routine_id])
-    @items = @routine.items
+
+    if @routine == nil || current_user != @routine.user
+      redirect_to user_path(current_user)
+    else
+      @items = @routine.items
+    end
   end
 
   def show
