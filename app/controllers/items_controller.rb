@@ -14,6 +14,10 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find_by(id: params[:id])
     @routine = Routine.find_by(id: params[:routine_id])
+
+    if @routine == nil || current_user != @routine.user
+      redirect_to user_path(current_user)
+    end
   end
 
   def new
