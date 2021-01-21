@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+  before_action :require_login, only: [:show, :new, :edit]
+
   def show
     @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:item_id])
