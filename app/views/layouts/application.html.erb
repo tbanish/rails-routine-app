@@ -11,9 +11,16 @@
 
   <body>
     <div class="nav-bar">
-      <%= link_to "login", login_path %> |
-      <%= link_to "sign in with google", '/auth/google_oauth2'%> |
-      <%= link_to "signup", signup_path %> |
+      <% if !logged_in? %>
+        <%= link_to "login", login_path %> |
+        <%= link_to "sign in with google", '/auth/google_oauth2'%> |
+        <%= link_to "signup", signup_path %> |
+      <% else %>
+        <%= link_to "home", user_path(current_user) %> |
+        <%= link_to "routines", routines_path %> |
+        <%= link_to "instruments", instruments_path %> |
+        <%= link_to "logout", logout_path, method: :delete %> |
+      <% end %>
     </div>
     <%= yield %>
   </body>
