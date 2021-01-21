@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :require_login, only: [:index, :show, :new, :edit]
+
   def index
     @routine = Routine.find_by(id: params[:routine_id])
     @items = @routine.items
