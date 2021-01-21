@@ -37,6 +37,10 @@ class NotesController < ApplicationController
     @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:item_id])
     @note = Note.find_by(id: params[:id])
+
+    if @routine == nil || current_user != @routine.user
+      redirect_to user_path(current_user)
+    end
   end
 
   def update
