@@ -22,7 +22,12 @@ class ItemsController < ApplicationController
 
   def new
     @routine = Routine.find_by(id: params[:routine_id])
-    @item = @routine.items.build
+
+    if @routine == nil || current_user != @routine.user
+      redirect_to user_path(current_user)
+    else
+      @item = @routine.items.build
+    end
   end
 
   def create
