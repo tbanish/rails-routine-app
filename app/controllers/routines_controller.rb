@@ -31,6 +31,10 @@ class RoutinesController < ApplicationController
 
   def edit
     @routine = Routine.find_by(id: params[:id])
+
+    if @routine == nil || current_user != @routine.user
+      redirect_to user_path(current_user)
+    end
   end
 
   def update
