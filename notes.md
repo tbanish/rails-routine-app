@@ -39,7 +39,7 @@
 ## Sprint 7
 - [ ] add simple validations to models
 - [ ] prevent bad data from persisting to database
-- [ ] prevent unauthorized access to a user's private pages
+- [x] prevent unauthorized access to a user's private pages
 - [ ] display validation errors
 - [ ] create a class level scope method
 
