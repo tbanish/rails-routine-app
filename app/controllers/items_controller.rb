@@ -43,6 +43,10 @@ class ItemsController < ApplicationController
   def edit
     @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:id])
+
+    if @routine == nil || current_user != @routine.user
+      redirect_to user_path(current_user)
+    end
   end
 
   def update
