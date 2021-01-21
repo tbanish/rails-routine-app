@@ -7,6 +7,10 @@ class RoutinesController < ApplicationController
 
   def show
     @routine = Routine.find_by(id: params[:id])
+
+    if @routine == nil || current_user != @routine.user
+      redirect_to user_path(current_user)
+    end
   end
 
   def new
