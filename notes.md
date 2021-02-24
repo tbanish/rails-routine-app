@@ -37,7 +37,7 @@
 - [x] set up omniauth
 
 ## Sprint 7
-- [ ] add simple validations to models
+- [x] add simple validations to models
 - [ ] prevent bad data from persisting to database
 - [x] prevent unauthorized access to a user's private pages
 - [ ] display validation errors
