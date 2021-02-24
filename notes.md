@@ -40,7 +40,7 @@
 - [x] add simple validations to models
 - [x] prevent bad data from persisting to database
 - [x] prevent unauthorized access to a user's private pages
-- [ ] display validation errors
+- [x] display validation errors
 - [ ] create a class level scope method
 
 # Routes
