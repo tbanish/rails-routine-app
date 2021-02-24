@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to routine_items_path(@routine)
     else
-      redirect_to :new
+      render :new
     end
   end
 
