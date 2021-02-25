@@ -1,5 +1,7 @@
 <h1>Edit Note</h1>
 
+<%= render partial: "layouts/errors", locals: {object: @note} %>
+
 <%= form_for(@note, url: routine_item_note_path(@routine, @item, @note)) do |f| %>
   <div class="">
     <%= f.label :content %>
