@@ -2,13 +2,4 @@
 
 <%= render partial: "layouts/errors", locals: {object: @note} %>
 
-<%= form_for(@note, url: routine_item_notes_path(@routine, @item)) do |f| %>
-  <div class="">
-    <%= f.label :content %>
-    <%= f.text_area:content, size: "30x10"  %>
-  </div>
-  <br>
-  <br>
-  <%= f.hidden_field :item_id, value: @item.id %>
-  <%= f.submit "add note" %>
-<% end %>
+<%= render partial: "form", locals: {path: routine_item_notes_path(@routine, @item)} %>
