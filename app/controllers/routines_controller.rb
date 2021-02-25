@@ -19,9 +19,11 @@ class RoutinesController < ApplicationController
   end
 
   def create
+    @instrument = Instrument.create_or_find_by(name: routine_params[:instrument_attributes][:name])
     @routine = Routine.new(routine_params)
+    @routine.instrument_id = @instrument.id
     @routine.user_id = current_user.id
-
+    
     if @routine.save
       redirect_to routine_path(@routine)
     else
