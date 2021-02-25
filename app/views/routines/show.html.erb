@@ -4,6 +4,7 @@
   <li><%= link_to "delete routine", routine_path(@routine), method: :delete %></li>
   <li><%= link_to "edit routine", edit_routine_path(@routine) %></li>
   <li><%= link_to "view items", routine_items_path(@routine) %></li>
+  <li><%= link_to "add item", new_routine_item_path(@routine, @item) %></li>
 </ul>
 
 
