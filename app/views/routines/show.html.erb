@@ -1,6 +1,10 @@
 <h1><%= @routine.name %></h1>
 
-<%= link_to "delete routine", routine_path(@routine), method: :delete %>
+<ul>
+  <li><%= link_to "delete routine", routine_path(@routine), method: :delete %></li>
+  <li><%= link_to "view items", routine_items_path(@routine) %></li>
+</ul>
+
 
 <% @routine.items.each do |item| %>
   <li><%= link_to item.name, routine_item_path(@routine, item) %></li>
