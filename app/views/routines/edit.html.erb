@@ -1,5 +1,7 @@
 <h1>Edit Routine: <%= @routine.name %></h1>
 
+<%= render partial: "layouts/errors", locals: {object: @routine} %>
+
 <%= form_for(@routine) do |f| %>
   <div class="">
     <%= f.label :name %>
