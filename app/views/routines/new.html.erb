@@ -1,18 +1,6 @@
 <h1>Create a Routine</h1>
 
-<% if @routine.errors.any? %>
-  <div class="errors">
-    <h2>
-      <%= pluralize(@routine.errors.count, "error") %>
-      prohibited this routine from being saved:
-    </h2>
-    <ul>
-    <% @routine.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
+<%= render partial: "layouts/errors", locals: {object: @routine} %>
 
 <%= form_for(@routine) do |f| %>
   <div class="">
