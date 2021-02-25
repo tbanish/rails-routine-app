@@ -1,5 +1,9 @@
 <h1><%= @item.name %> Note: <%= @note.created_at %></h1>
 
-<p><%= link_to "delete note", routine_item_note_path(@routine, @item, @note), method: :delete %></p>
+<ul>
+  <li><%= link_to "delete note", routine_item_note_path(@routine, @item, @note), method: :delete %></li>
+  <li><%= link_to "edit note", edit_routine_item_note_path(@routine, @item, @note) %></li>
+</ul>
+
 
 <p><%= @note.content %></p>
