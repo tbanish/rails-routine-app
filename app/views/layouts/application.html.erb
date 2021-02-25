@@ -18,6 +18,7 @@
       <% else %>
         <%= link_to "home", user_path(current_user) %> |
         <%= link_to "routines", routines_path %> |
+        <%= link_to "new routine", new_routine_path %> |
         <%= link_to "instruments", instruments_path %> |
         <%= link_to "logout", logout_path, method: :delete %> |
       <% end %>
