@@ -1,0 +1,10 @@
+<%= form_for(@note, url: path) do |f| %>
+  <div class="">
+    <%= f.label :content %>
+    <%= f.text_area:content, size: "30x10"  %>
+  </div>
+  <br>
+  <br>
+  <%= f.hidden_field :item_id, value: @item.id %>
+  <%= f.submit "add note" %>
+<% end %>
