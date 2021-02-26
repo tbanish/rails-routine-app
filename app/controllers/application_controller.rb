@@ -22,6 +22,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_item
-    @item = Item.find_by(id: params[:id])
+    @item = Item.find_by(id: params[:item_id])
   end
 end
