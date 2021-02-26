@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     end
   end
+
+  def set_routine
+    @routine = Routine.find_by(id: params[:routine_id])
+  end
 end
