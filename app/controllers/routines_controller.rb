@@ -1,13 +1,12 @@
 class RoutinesController < ApplicationController
   before_action :require_login, only: [:index, :show, :new, :edit]
+  before_action :set_routine, only: [:show, :edit, :update, :destroy]
 
   def index
     @routines = current_user.routines
   end
 
   def show
-    @routine = Routine.find_by(id: params[:id])
-
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
@@ -23,7 +22,7 @@ class RoutinesController < ApplicationController
     @routine = Routine.new(routine_params)
     @routine.instrument_id = @instrument.id
     @routine.user_id = current_user.id
-    
+
     if @routine.save
       redirect_to routine_path(@routine)
     else
@@ -32,15 +31,12 @@ class RoutinesController < ApplicationController
   end
 
   def edit
-    @routine = Routine.find_by(id: params[:id])
-
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
   end
 
   def update
-    @routine = Routine.find_by(id: params[:id])
     @routine.update(routine_params)
 
     if @routine.save
@@ -51,7 +47,6 @@ class RoutinesController < ApplicationController
   end
 
   def destroy
-    @routine = Routine.find_by(id: params[:id])
     @routine.destroy
     redirect_to routines_path
   end
@@ -60,5 +55,9 @@ class RoutinesController < ApplicationController
 
   def routine_params
     params.require(:routine).permit(:name, :instrument_id, instrument_attributes: [:name])
+  end
+
+  def set_routine
+    @routine = Routine.find_by(id: params[:id])
   end
 end
