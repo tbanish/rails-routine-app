@@ -47,6 +47,6 @@ routines/1/items/new
 Confirm:
 
  - [ ] The application is pretty DRY
- - [ ] Limited logic in controllers
+ - [x] Limited logic in controllers
  - [ ] Views use helper methods if appropriate
  - [x] Views use partials if appropriate
