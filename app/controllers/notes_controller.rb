@@ -1,8 +1,8 @@
 class NotesController < ApplicationController
   before_action :require_login, only: [:show, :new, :edit]
+  before_action :set_routine
 
   def show
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:item_id])
     @note = Note.find_by(id: params[:id])
 
@@ -12,7 +12,6 @@ class NotesController < ApplicationController
   end
 
   def new
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:item_id])
     @note = Note.new
 
@@ -22,7 +21,6 @@ class NotesController < ApplicationController
   end
 
   def create
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:item_id])
     @note = Note.new(note_params)
 
@@ -34,7 +32,6 @@ class NotesController < ApplicationController
   end
 
   def edit
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:item_id])
     @note = Note.find_by(id: params[:id])
 
@@ -45,7 +42,6 @@ class NotesController < ApplicationController
 
   def update
     @note = Note.find_by(id: params[:id])
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:item_id])
     @note.update(note_params)
 
@@ -58,7 +54,6 @@ class NotesController < ApplicationController
 
   def destroy
     @note = Note.find_by(id: params[:id])
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:item_id])
     @note.destroy
 
