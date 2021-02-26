@@ -20,4 +20,8 @@ class ApplicationController < ActionController::Base
   def set_routine
     @routine = Routine.find_by(id: params[:routine_id])
   end
+
+  def set_item
+    @item = Item.find_by(id: params[:id])
+  end
 end
