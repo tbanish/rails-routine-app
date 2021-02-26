@@ -3,8 +3,6 @@ class ItemsController < ApplicationController
   before_action :set_routine
 
   def index
-    @routine = Routine.find_by(id: params[:routine_id])
-
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     else
@@ -14,7 +12,6 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find_by(id: params[:id])
-    @routine = Routine.find_by(id: params[:routine_id])
 
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
@@ -22,8 +19,6 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @routine = Routine.find_by(id: params[:routine_id])
-
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     else
@@ -32,7 +27,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.new(item_params)
     if @item.save
       redirect_to routine_items_path(@routine)
@@ -42,7 +36,6 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:id])
 
     if @routine == nil || current_user != @routine.user
@@ -51,7 +44,6 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:id])
     @item.update(item_params)
 
@@ -63,7 +55,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @routine = Routine.find_by(id: params[:routine_id])
     @item = Item.find_by(id: params[:id])
     @item.destroy
     redirect_to routine_items_path(@routine)
