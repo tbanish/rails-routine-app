@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :require_login, only: [:index, :show, :new, :edit]
   before_action :set_routine
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
     if @routine == nil || current_user != @routine.user
@@ -11,8 +12,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find_by(id: params[:id])
-
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
@@ -36,15 +35,12 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find_by(id: params[:id])
-
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
   end
 
   def update
-    @item = Item.find_by(id: params[:id])
     @item.update(item_params)
 
     if @item.save
@@ -55,7 +51,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find_by(id: params[:id])
     @item.destroy
     redirect_to routine_items_path(@routine)
   end
@@ -68,5 +63,9 @@ class ItemsController < ApplicationController
 
   def set_routine
     @routine = Routine.find_by(id: params[:routine_id])
+  end
+
+  def set_item
+    @item = Item.find_by(id: params[:id])
   end
 end
