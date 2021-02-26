@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :require_login, only: [:index, :show, :new, :edit]
+  before_action :set_routine
 
   def index
     @routine = Routine.find_by(id: params[:routine_id])
@@ -72,5 +73,9 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:name, :description, :goal, :routine_id)
+  end
+
+  def set_routine
+    @routine = Routine.find_by(id: params[:routine_id])
   end
 end
