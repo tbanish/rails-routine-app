@@ -2,10 +2,9 @@ class NotesController < ApplicationController
   before_action :require_login, only: [:show, :new, :edit]
   before_action :set_routine
   before_action :set_item
+  before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   def show
-    @note = Note.find_by(id: params[:id])
-
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
@@ -30,15 +29,12 @@ class NotesController < ApplicationController
   end
 
   def edit
-    @note = Note.find_by(id: params[:id])
-
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
   end
 
   def update
-    @note = Note.find_by(id: params[:id])
     @note.update(note_params)
 
     if @note.save
@@ -49,7 +45,6 @@ class NotesController < ApplicationController
   end
 
   def destroy
-    @note = Note.find_by(id: params[:id])
     @note.destroy
 
     redirect_to routine_item_path(@routine, @item)
@@ -59,5 +54,9 @@ class NotesController < ApplicationController
 
   def note_params
     params.require(:note).permit(:content, :item_id)
+  end
+
+  def set_note
+    @note = Note.find_by(id: params[:id])
   end
 end
