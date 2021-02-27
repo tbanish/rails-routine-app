@@ -17,3 +17,9 @@ body {
   font-family: Optima, sans-serif;
   background: #fff4e6;
 }
+
+.nav-bar {
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  text-align: right;
+}
