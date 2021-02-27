@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @next = @routine.next_item(@item)
     if @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
