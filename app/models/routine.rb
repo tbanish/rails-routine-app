@@ -4,4 +4,9 @@ class Routine < ApplicationRecord
   has_many :items
   validates :name, :instrument_id, presence: true
   accepts_nested_attributes_for :instrument, reject_if: proc {|attributes| attributes['name'].blank?}
+
+  def next_item(item)
+    @next_item = self.items[self.items.find_index(item) + 1]
+    @next_item ? @next_item : self.items.first
+  end
 end
