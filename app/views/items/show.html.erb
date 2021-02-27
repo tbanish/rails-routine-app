@@ -5,6 +5,8 @@
   <li><%= link_to "edit item", edit_routine_item_path(@routine, @item) %></li>
 </ul>
 
+<%= button_to "next item", routine_item_path(@routine, @next), method: :get %>
+
 <p><%= @item.name %></p>
 <p><%= @item.description %></p>
 <p><%= @item.goal %></p>
