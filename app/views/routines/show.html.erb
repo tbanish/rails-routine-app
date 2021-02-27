@@ -7,7 +7,8 @@
   <li><%= link_to "add item", new_routine_item_path(@routine, @item) %></li>
 </ul>
 
-
-<% @routine.items.each do |item| %>
-  <li><%= link_to item.name, routine_item_path(@routine, item) %></li>
-<% end %>
+<ol>
+  <% @routine.items.each do |item| %>
+    <li><%= link_to item.name, routine_item_path(@routine, item) %></li>
+  <% end %>
+</ol>
