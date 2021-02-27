@@ -1,21 +1,27 @@
 <h1><%= @routine.name %>: <%= @item.name %></h1>
 
-<div class="">
-  <p><%= @item.name %></p>
-  <p><%= @item.description %></p>
-  <p><%= @item.goal %></p>
-</div>
+<div class="container">
+  <div class="grid-item-1">
+    <div class="item-content">
+      <p><%= @item.name %></p>
+      <p><%= @item.description %></p>
+      <p><%= @item.goal %></p>
+    </div>
 
-<div class="">
-  <%= button_to "delete item", routine_item_path(@routine, @item), method: :delete %>
-  <%= button_to "edit item", edit_routine_item_path(@routine, @item) %>
-  <%= button_to "next item", routine_item_path(@routine, @next), method: :get %>
-</div>
+    <div class="item-buttons">
+      <%= button_to "delete item", routine_item_path(@routine, @item), method: :delete %>
+      <%= button_to "edit item", edit_routine_item_path(@routine, @item) %>
+      <%= button_to "next item", routine_item_path(@routine, @next), method: :get %>
+    </div>
+  </div>
 
-<div class="">
-  <h3>Notes</h3>
+  <div class="grid-item-2">
+    <div class="item-notes">
+      <h3>Notes</h3>
 
-  <% @item.notes.each do |note| %>
-    <li><%= link_to note.created_at, routine_item_note_path(@routine, @item, note) %> - <%= note.content %></li>
-  <% end %>
+      <% @item.notes.each do |note| %>
+        <li><%= link_to note.created_at, routine_item_note_path(@routine, @item, note) %> - <%= note.content %></li>
+      <% end %>
+    </div>
+  </div>
 </div>
