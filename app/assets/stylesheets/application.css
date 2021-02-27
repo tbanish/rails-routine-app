@@ -25,3 +25,7 @@ body {
   text-align: right;
   background: #e5e5e5;
 }
+
+.nav-bar a {
+  text-decoration: none;
+}
