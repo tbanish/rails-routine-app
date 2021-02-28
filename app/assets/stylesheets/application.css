@@ -34,3 +34,12 @@ h1 {
   text-align: center;
   color: #854442;
 }
+
+.login-form {
+  margin-left: 33%;
+  box-shadow: 5px 5px 2px 1px #937d62;
+  margin-right: 33%;
+  padding: 1em;
+  background: #be9b7b;
+  text-align: center;
+}
