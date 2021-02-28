@@ -12,6 +12,7 @@
       <%= link_to "delete item", routine_item_path(@routine, @item), method: :delete %>
       <%= link_to "edit item", edit_routine_item_path(@routine, @item) %>
       <%= link_to "next item", routine_item_path(@routine, @next) %>
+      <%= link_to "new note", new_routine_item_note_path(@routine, @item) %>
     </div>
   </div>
 
@@ -22,9 +23,6 @@
       <% @item.notes.each do |note| %>
         <li><%= link_to note.created_at, routine_item_note_path(@routine, @item, note) %> - <%= note.content %></li>
       <% end %>
-    </div>
-    <div class="">
-      <%= link_to "new note", new_routine_item_note_path(@routine, @item) %>
     </div>
   </div>
 </div>
