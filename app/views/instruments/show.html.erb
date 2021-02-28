@@ -1,7 +1,7 @@
-<h1><%= @instrument.name %></h1>
+<h1><%= @instrument.name %> Routines</h1>
 
-<h3>Routines</h3>
-
-<% @routines.each do |routine| %>
-  <li><%= routine.name %></li>
-<% end %>
+<div class="instrument-routine-list">
+  <% @routines.each do |routine| %>
+    <li><%= routine.name %></li>
+  <% end %>
+</div>
