@@ -1,5 +1,7 @@
 <h1>Instruments</h1>
 
-<% @instruments.each do |instrument| %>
-  <li><%= instrument.name %></li>
-<% end %>
+<div class="instrument-list">
+  <% @instruments.each do |instrument| %>
+    <li><%= instrument.name %></li>
+  <% end %>
+</div>
