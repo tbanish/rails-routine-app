@@ -1,5 +1,7 @@
 <h1>Routines</h1>
 
-<% @routines.each do |routine| %>
-  <li><%= link_to routine.name, routine_path(routine) %></li>
-<% end %>
+<div class="routine-list">
+  <% @routines.each do |routine| %>
+    <li><%= link_to routine.name, routine_path(routine) %></li>
+  <% end %>
+</div>
