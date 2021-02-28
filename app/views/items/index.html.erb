@@ -1,7 +1,7 @@
 <h1><%= @routine.name %> Items</h1>
 
 <% @items.each do |item| %>
-  <div class="">
+  <div id="<%= item.id %>"class="item-box">
     <li><%= link_to item.name, routine_item_path(@routine, item) %></li>
     <p><%= item.description %></p>
     <p><%= item.goal %></p>
