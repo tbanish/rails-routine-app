@@ -29,3 +29,7 @@ body {
 .nav-bar a {
   text-decoration: none;
 }
+
+h1 {
+  margin-left: 5px;
+}
