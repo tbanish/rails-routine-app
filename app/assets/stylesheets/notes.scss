@@ -16,3 +16,21 @@
   padding: 1em;
   background: #be9b7b;
 }
+
+.note-content {
+  box-shadow: 5px 5px 2px 1px #937d62;
+  padding: 1em;
+  background: white;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10px;
+}
+
+.note-links {
+  display: inline;
+  margin-left: 25%;
+}
+
+.note-links a {
+  padding: 1em;
+}
