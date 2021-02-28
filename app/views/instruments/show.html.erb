@@ -2,6 +2,6 @@
 
 <div class="instrument-routine-list">
   <% @routines.each do |routine| %>
-    <li><%= routine.name %></li>
+    <li><%= link_to routine.name, routine_path(routine) %></li>
   <% end %>
 </div>
