@@ -7,7 +7,7 @@ class InstrumentsController < ApplicationController
 
   def show
     @instrument = Instrument.find_by(id: params[:id])
-
+    @routines = @instrument.routines.collect{|routine| routine if routine.user == current_user}.compact
     if !current_user.instruments.include?(@instrument)
       redirect_to instruments_path
     end
