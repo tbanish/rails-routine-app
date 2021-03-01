@@ -5,7 +5,7 @@ class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   def show
-    if @routine == nil || current_user != @routine.user
+    if !@note || @note.item.routine.user != current_user || @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
   end
@@ -29,7 +29,7 @@ class NotesController < ApplicationController
   end
 
   def edit
-    if @routine == nil || current_user != @routine.user
+    if !@note || @note.item.routine.user != current_user || @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
   end
