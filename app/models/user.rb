@@ -10,4 +10,8 @@ class User < ApplicationRecord
     end
   end
 
+  def routine_count
+    self.routines.count
+  end
+
 end
