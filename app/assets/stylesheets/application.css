@@ -52,3 +52,9 @@ h1 {
   background: #be9b7b;
   text-align: center;
 }
+
+.flash_message {
+  text-align: center;
+  padding: 1em;
+  color: red;
+}
