@@ -18,11 +18,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @top_instrument = Instrument.most_routines.first
-    @routine_count = @user.routine_count
-    @instrument_count = @user.instrument_count
-
+    
     if @user && @user == current_user
+      @top_instrument = Instrument.most_routines.first
+      @routine_count = @user.routine_count
+      @instrument_count = @user.instrument_count
       render :show
     else
       redirect_to user_path(current_user)
