@@ -12,6 +12,7 @@
   <body>
     <div class="nav-bar">
       <% if !logged_in? %>
+        <%= link_to "home", "/" %> |
         <%= link_to "login", login_path %> |
         <%= link_to "sign in with google", '/auth/google_oauth2'%> |
         <%= link_to "signup", signup_path %> |
