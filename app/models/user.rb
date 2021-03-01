@@ -14,4 +14,7 @@ class User < ApplicationRecord
     self.routines.count
   end
 
+  def instrument_count
+    self.instruments.count
+  end
 end
