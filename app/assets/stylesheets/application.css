@@ -80,4 +80,9 @@ h1 {
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: bold;
 }
