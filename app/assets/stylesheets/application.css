@@ -40,7 +40,7 @@ h1 {
   box-shadow: 5px 5px 2px 1px #937d62;
   margin-right: 33%;
   padding: 1em;
-  background: #be9b7b;
+  background: #e6f1ff;
   text-align: center;
 }
 
@@ -49,7 +49,7 @@ h1 {
   box-shadow: 5px 5px 2px 1px #937d62;
   margin-right: 33%;
   padding: 1em;
-  background: #be9b7b;
+  background: #e6f1ff;
   text-align: center;
 }
 
@@ -85,4 +85,17 @@ a {
 
 a:hover {
   font-weight: bold;
+}
+
+input[type="submit"] {
+  background-color: #ffb24e;
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 4px;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background-color: #e5a046;
 }
