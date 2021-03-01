@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    if @routine == nil || current_user != @routine.user
+    if !@item || @item.routine.user != current_user || @routine == nil || current_user != @routine.user
       redirect_to user_path(current_user)
     end
   end
