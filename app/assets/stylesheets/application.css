@@ -58,3 +58,9 @@ h1 {
   padding: 1em;
   color: red;
 }
+
+.errors {
+  margin-left: 25%;
+  padding: 1em;
+  color: red;
+}
