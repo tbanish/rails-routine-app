@@ -3,17 +3,5 @@
 <%= render partial: "layouts/errors", locals: {object: @user} %>
 
 <div class="signup-form">
-  <%= form_for @user do |f|%>
-    <div class="">
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-    </div>
-    <br>
-    <div class="">
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-    </div>
-    <br>
-    <%= f.submit "sign up" %>
-  <% end %>
+  <%= render partial: "sessions/form", locals: {path: @user, text: "signup"} %>
 </div>
