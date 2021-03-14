@@ -1,24 +1,5 @@
-# README
+# README:  Rails Routine App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application allows musicians to create and store practice routines.  Users can sign up, log in, create a new routine, add items to the routine and take notes on each item to keep track of their progress.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To install simply clone and fork the git repository and run bundle install.  To start the rails server run the command `rails s`.  
