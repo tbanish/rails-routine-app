@@ -1,7 +1,7 @@
 class Routine < ApplicationRecord
   belongs_to :instrument
   belongs_to :user
-  has_many :items
+  has_many :items, dependent: :destroy
   validates :name, :instrument_id, presence: true
   accepts_nested_attributes_for :instrument, reject_if: proc {|attributes| attributes['name'].blank?}
 
