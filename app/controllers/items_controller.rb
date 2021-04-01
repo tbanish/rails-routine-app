@@ -53,7 +53,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    redirect_to routine_items_path(@routine)
+    redirect_to routine_path(@routine)
   end
 
   private
