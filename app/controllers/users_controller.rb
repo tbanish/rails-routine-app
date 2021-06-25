@@ -18,9 +18,13 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    
+
     if @user && @user == current_user
-      @top_instrument = Instrument.most_routines.first
+      if Instrument.all.count > 0
+        @top_instrument = Instrument.most_routines.first
+      else
+        @top_instrument = nil
+      end
       @routine_count = @user.routine_count
       @instrument_count = @user.instrument_count
       render :show
