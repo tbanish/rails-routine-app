@@ -2,7 +2,11 @@
 
 <div class="most-popular-instrument">
   <h3>Most Popular Instrument:</h3>
-  <%= @top_instrument.name %>
+  <% if @top_instrument != nil %>
+    <%= @top_instrument.name %>
+  <% else %>
+    <p>An instrument has not been created yet.</p>
+  <% end %>
 </div>
 
 <div class="number-of-routines">
