@@ -2,7 +2,10 @@ class InstrumentsController < ApplicationController
   before_action :require_login, only: [:index, :show]
 
   def index
-    @instruments = current_user.instruments
+    @instruments = []
+    current_user.instruments.each do |i|
+      @instruments << i if !@instruments.include?(i)
+    end
   end
 
   def show
