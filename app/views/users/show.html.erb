@@ -1,20 +1,32 @@
 <h1><%= @user.username %></h1>
 
-<div class="most-popular-instrument">
-  <h3>Most Popular Instrument:</h3>
-  <% if @top_instrument != nil %>
-    <%= @top_instrument.name %>
-  <% else %>
-    <p>An instrument has not been created yet.</p>
-  <% end %>
-</div>
+<div class="user-main">
+  <div class="tip">
+    <h2>Practice Tip of the Day</h2>
+    <h3>Warm Up</h3>
+    <p>Like a physical workout, a warm-up is essential. But don’t just plough through the same warm-up routine every-time and let your mind wander – a warm-up isn't just about getting your muscles moving. Take it as an opportunity to prepare your body and mind for work and take stock of how you're feeling, how you're breathing, the tension your body is holding and why you are doing that particular exercise.</p>
 
-<div class="number-of-routines">
-  <h3>Number of Routines:</h3>
-  <%= @routine_count %>
-</div>
+    <p>Your warm-up doesn’t always have to be 15 minutes of scales; try different technical studies or sight reading. If you are going to do scales, consider the keys of the pieces you are rehearsing. And as a cool-down, revisit a piece of music you already know well and enjoy.</p>
+  </div>
 
-<div class="number-of-instruments">
-  <h3>Number of Instruments:</h3>
-  <%= @instrument_count %>
+  <div class="stats-widget">
+    <div class="most-popular-instrument">
+      <h3>Most Popular Instrument:</h3>
+      <% if @top_instrument != nil %>
+        <%= @top_instrument.name %>
+      <% else %>
+        <p>An instrument has not been created yet.</p>
+      <% end %>
+    </div>
+
+    <div class="number-of-routines">
+      <h3>Number of Routines:</h3>
+      <%= @routine_count %>
+    </div>
+
+    <div class="number-of-instruments">
+      <h3>Number of Instruments:</h3>
+      <%= @instrument_count %>
+    </div>
+  </div>
 </div>
