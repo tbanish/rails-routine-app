@@ -29,3 +29,9 @@ piano_item1_note = Note.create(content: "focus more on left hand tomorrow", item
 piano_item2_note = Note.create(content: "start verse 2 next time", item_id: piano_item2.id)
 guitar_item1_note = Note.create(content: "need to slow this down more and build up gradually", item_id: guitar_item1.id)
 guitar_item2_note = Note.create(content: "this was too easy, need to pick a more challenging song", item_id: guitar_item2.id)
+
+#TIPS
+warm_up = Tip.create(
+  title: "Warm Up",
+  content: "Like a physical workout, a warm-up is essential. But don’t just plough through the same warm-up routine every-time and let your mind wander – a warm-up isn't just about getting your muscles moving. Take it as an opportunity to prepare your body and mind for work and take stock of how you're feeling, how you're breathing, the tension your body is holding and why you are doing that particular exercise. Your warm-up doesn’t always have to be 15 minutes of scales; try different technical studies or sight reading. If you are going to do scales, consider the keys of the pieces you are rehearsing. And as a cool-down, revisit a piece of music you already know well and enjoy."
+)
