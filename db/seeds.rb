@@ -35,3 +35,8 @@ warm_up = Tip.create(
   title: "Warm Up",
   content: "Like a physical workout, a warm-up is essential. But don’t just plough through the same warm-up routine every-time and let your mind wander – a warm-up isn't just about getting your muscles moving. Take it as an opportunity to prepare your body and mind for work and take stock of how you're feeling, how you're breathing, the tension your body is holding and why you are doing that particular exercise. Your warm-up doesn’t always have to be 15 minutes of scales; try different technical studies or sight reading. If you are going to do scales, consider the keys of the pieces you are rehearsing. And as a cool-down, revisit a piece of music you already know well and enjoy."
 )
+
+goal = Tip.create(
+  title: "Have a Goal",
+  content: "Playing through all your old music isn’t the same as practising. Start with the end in mind: by having a goal for each practice session before you start playing, you will find you progress much more quickly and effectively. Then, break each goal down into smaller, focused objectives. You'll feel a great sense of accomplishment as you complete each goal."
+)
