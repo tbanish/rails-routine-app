@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+    @tip = Tip.random_tip
 
     if @user && @user == current_user
       if Instrument.all.count > 0
