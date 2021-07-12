@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag 'application',
     'https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap',
+    'https://fonts.googleapis.com/css2?family=Raleway&display=swap',
     media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -16,8 +17,8 @@
       <% if !logged_in? %>
         <%= link_to "home", "/" %>
         <%= link_to "login", login_path %>
-        <%= link_to "sign in with google", '/auth/google_oauth2'%>
         <%= link_to "signup", signup_path %>
+        <%= link_to "sign in with google", '/auth/google_oauth2'%>
       <% else %>
         <%= link_to "home", user_path(current_user) %>
         <%= link_to "routines", routines_path %>
