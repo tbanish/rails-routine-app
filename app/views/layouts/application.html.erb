@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application',
-    'https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap', 
+    'https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap',
     media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -14,16 +14,16 @@
   <body>
     <div class="nav-bar">
       <% if !logged_in? %>
-        <%= link_to "home", "/" %> |
-        <%= link_to "login", login_path %> |
-        <%= link_to "sign in with google", '/auth/google_oauth2'%> |
-        <%= link_to "signup", signup_path %> |
+        <%= link_to "home", "/" %>
+        <%= link_to "login", login_path %>
+        <%= link_to "sign in with google", '/auth/google_oauth2'%>
+        <%= link_to "signup", signup_path %>
       <% else %>
-        <%= link_to "home", user_path(current_user) %> |
-        <%= link_to "routines", routines_path %> |
-        <%= link_to "new routine", new_routine_path %> |
-        <%= link_to "instruments", instruments_path %> |
-        <%= link_to "logout", logout_path, method: :delete %> |
+        <%= link_to "home", user_path(current_user) %>
+        <%= link_to "routines", routines_path %>
+        <%= link_to "new routine", new_routine_path %>
+        <%= link_to "instruments", instruments_path %>
+        <%= link_to "logout", logout_path, method: :delete %>
       <% end %>
     </div>
 
@@ -35,4 +35,6 @@
 
     <%= yield %>
   </body>
+
+  <footer><p class="copyright">Tom Banish &copy 2021</p></footer>
 </html>
