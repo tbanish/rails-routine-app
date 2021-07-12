@@ -14,18 +14,44 @@
  *= require_self
  */
 body {
-  font-family: Optima, sans-serif;
+  font-family: Raleway, sans-serif;
   background: #ffffff;
   margin: auto;
   height: 100%;
   width: 100%;
 }
 
+h1 {
+  margin: 0;
+  padding-top: 1em;
+  font-size: 3em;
+  text-align: center;
+  color: #ffffb2;
+}
+
+.session-header {
+  font-size: 4em;
+}
+
+.welcome h1 {
+  padding-top: 2%;
+  font-size: 3em;
+}
+
 .welcome {
   height: 30em;
   width: 100%;
-  background-image: linear-gradient(150deg, yellow, yellowgreen, green, darkgreen, green, yellowgreen, yellow);
+  background-image: linear-gradient(45deg, darkgreen, lightgreen);
   margin-bottom: 5%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.session-banner {
+  height: 15em;
+  width: 100%;
+  background-image: linear-gradient(45deg, darkgreen, lightgreen);
+  margin-bottom: 5%;
+  border-bottom: 1px solid lightgrey;
 }
 
 .main-logo {
@@ -62,31 +88,24 @@ body {
   padding-top: 2%;
 }
 
-h1 {
-  margin: 0;
-  padding-top: 4em;
-  font-size: 3em;
+.login-form, .signup-form {
   text-align: center;
-  color: #ffffff;
+  width: 30%;
+  margin: auto;
+  margin-bottom: 5%;
+  padding: 5% 0 5% 0;
+  border-radius: 10px;
+  background: #e0e0ff;
 }
 
-.login-form {
-  margin-left: 33%;
-  box-shadow: 5px 5px 2px 1px #937d62;
-  margin-right: 33%;
-  padding: 1em;
-  background: #e6f1ff;
-  text-align: center;
-}
-
-.signup-form {
-  margin-left: 33%;
-  box-shadow: 5px 5px 2px 1px #937d62;
-  margin-right: 33%;
-  padding: 1em;
-  background: #e6f1ff;
-  text-align: center;
-}
+// .signup-form {
+//   margin-left: 33%;
+//   box-shadow: 5px 5px 2px 1px #937d62;
+//   margin-right: 33%;
+//   padding: 1em;
+//   background: #e6f1ff;
+//   text-align: center;
+// }
 
 .flash_message {
   text-align: center;
@@ -106,6 +125,7 @@ h1 {
   margin-bottom: 5%;
   line-height: 1.5em;
   font-size: 1.25em;
+  color: grey;
 }
 
 .welcome-grid {
@@ -118,6 +138,10 @@ h1 {
 .welcome-column {
   line-height: 1.5em;
   margin-bottom: 5%;
+}
+
+.welcome-content p{
+  color: grey;
 }
 
 .site-content {
