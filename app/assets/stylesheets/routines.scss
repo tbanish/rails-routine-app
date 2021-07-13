@@ -18,6 +18,14 @@
   border-bottom: 1px solid lightgrey;
 }
 
+.routine-banner2 {
+  height: 10em;
+  width: 100%;
+  background-image: linear-gradient(45deg, darkgreen, lightgreen);
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 3%;
+}
+
 .edit_routine {
   margin-left: 25%;
   box-shadow: 5px 5px 2px 1px #937d62;
@@ -44,12 +52,11 @@
 }
 
 .routine-item-list {
-  box-shadow: 5px 5px 2px 1px #937d62;
   padding: 1em;
-  background: white;
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 10px;
+  min-height: 22em;
 }
 
 .routine-item-list li {
