@@ -1,15 +1,21 @@
-<h1><%= @user.username %></h1>
+<div class="user-banner"><h1>Welcome <%= @user.username %></h1></div>
 
 <div class="user-main">
+  <div class="routine-widget">
+    <h3>ROUTINES</h3>
+    <% @user.routines.each do |routine| %>
+      <div class="routine-widget-item"><%= routine.name %></div>
+    <% end %>
+  </div>
+
   <div class="tip">
-    <h2>Practice Tip</h2>
-    <h3><%= @tip.title %></h3>
+    <h2>Practice Tip: <span><%= @tip.title %></span></h2>
     <p><%= @tip.content %></p>
   </div>
 
   <div class="stats-widget">
     <div class="most-popular-instrument">
-      <h3>Most Popular Instrument:</h3>
+      <h3>Most Popular Instrument</h3>
       <% if @top_instrument != nil %>
         <%= @top_instrument.name %>
       <% else %>
@@ -18,12 +24,12 @@
     </div>
 
     <div class="number-of-routines">
-      <h3>Number of Routines:</h3>
+      <h3>Number of Routines</h3>
       <%= @routine_count %>
     </div>
 
     <div class="number-of-instruments">
-      <h3>Number of Instruments:</h3>
+      <h3>Number of Instruments</h3>
       <%= @instrument_count %>
     </div>
   </div>
