@@ -1,7 +1,13 @@
-<h1>Routines</h1>
+<div class="routine-banner"><h1>Routines</h1></div>
+
 
 <div class="routine-list">
-  <% @routines.each do |routine| %>
-    <li><%= link_to routine.name, routine_path(routine) %></li>
+  <% if @routines.length == 0 %>
+    <h2>No Routines?</h2>
+    <p>If you would like to start building routines click <%= link_to "here", new_routine_path %>.</p>
+  <% else %>
+    <% @routines.each do |routine| %>
+      <li><%= link_to routine.name, routine_path(routine) %></li>
+    <% end %>
   <% end %>
 </div>
