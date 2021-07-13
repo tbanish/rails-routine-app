@@ -3,35 +3,106 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .user-main {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-column-gap: 5%;
+  height: 100%;
+  margin: 0 5% 0 5%;
+}
+
+.user-banner {
+  height: 10em;
+  width: 100%;
+  background-image: linear-gradient(45deg, darkgreen, lightgreen);
+  margin-bottom: 5%;
+  border-bottom: 1px solid lightgrey;
 }
 
 .tip {
-  box-shadow: 5px 5px 2px 1px #937d62;
-  padding: 1em;
-  background: white;
-  margin: 0 10% 0 10%;
+  padding: 2% 5% 2% 5%;
+  max-height: 75%;
+}
+
+.tip span {
+  color: #4c4c4c;
+}
+
+.tip p {
+  line-height: 1.5em;
+  color: #424246;
+  padding: 3% 0 3% 3%;
+  border-radius: 10px;
+}
+
+.tip h2 {
+  font-family: Monsterat, sans-serif;
+  font-size: 2em;
+  color: black;
+  padding-left: 2%;
+  text-align: center;
+}
+
+.routine-widget {
+  border-radius: 10px;
+  padding: 5% 10% 5% 10%;
+  background: #474766;
+  max-height: 75%;
+  overflow: scroll;
+}
+
+.routine-widget h3 {
+  font-family: Monsterat, sans-serif;
+  font-size: 2em;
+  color: #ffff00;
+  text-align: center;
+}
+
+.routine-widget-item {
+  padding: 4%;
+  background-image: linear-gradient(#9999FF, #c1c1ff);
+  color: #000000;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3%;
 }
 
 .stats-widget {
-  margin: 0 20% 0 5%;
+  border-radius: 10px;
+  padding: 7%;
+  background: #474766;
+  max-height: 85%;
+}
+
+.stats-widget h3 {
+  font-family: Monsterat, sans-serif;
+  font-size: 1.25em;
+  color: #ffff00;
 }
 
 .most-popular-instrument {
-  box-shadow: 5px 5px 2px 1px #937d62;
-  padding: 1em;
-  background: white;
+  padding: 4%;
+  background-image: linear-gradient(#9999FF, #c1c1ff);
+  color: #000000;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 3%;
 }
 
 .number-of-routines {
-  box-shadow: 5px 5px 2px 1px #937d62;
-  padding: 1em;
-  background: white;
+  padding: 4%;
+  background-image: linear-gradient(#9999FF, #c1c1ff);
+  color: #000000;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 3%;
+
 }
 
 .number-of-instruments {
-  box-shadow: 5px 5px 2px 1px #937d62;
-  padding: 1em;
-  background: white;
+  padding: 4%;
+  background-image: linear-gradient(#9999FF, #c1c1ff);
+  color: #000000;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 3%;
+
 }
