@@ -1,9 +1,12 @@
-<h1><%= @routine.name %> Items</h1>
+<div class="routine-banner"><h1><%= @routine.name %> Items</h1></div>
 
-<% @items.each do |item| %>
-  <div id="<%= item.id %>"class="item-box">
-    <li><%= link_to item.name, routine_item_path(@routine, item) %></li>
-    <p><%= item.description %></p>
-    <p><%= item.goal %></p>
-  </div>
-<% end %>
+
+<div class="item-grid">
+  <% @items.each do |item| %>
+    <div id="<%= item.id %>"class="item-box">
+      <li><%= link_to item.name, routine_item_path(@routine, item) %></li>
+      <p><%= item.description %></p>
+      <p><%= item.goal %></p>
+    </div>
+  <% end %>
+</div>
