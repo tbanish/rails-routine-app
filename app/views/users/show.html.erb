@@ -4,7 +4,7 @@
   <div class="routine-widget">
     <h3>ROUTINES</h3>
     <% @user.routines.each do |routine| %>
-      <div class="routine-widget-item"><%= routine.name %></div>
+      <div class="routine-widget-item"><%= link_to routine.name, routine_path(routine) %></div>
     <% end %>
   </div>
 
