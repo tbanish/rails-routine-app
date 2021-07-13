@@ -1,4 +1,4 @@
-<h1><%= @routine.name %>: <%= @item.name %></h1>
+<div class="routine-banner2"><h1><%= @routine.name %>: <%= @item.name %></h1></div>
 
 <div class="container">
   <div class="grid-item-1">
@@ -21,7 +21,7 @@
       <h3>Notes</h3>
 
       <% @item.notes.each do |note| %>
-        <li><%= link_to date(note), routine_item_note_path(@routine, @item, note) %> - <%= note.content %></li>
+        <li><%= link_to date(note), routine_item_note_path(@routine, @item, note) %> - <%= truncate(note) %></li>
       <% end %>
     </div>
   </div>
