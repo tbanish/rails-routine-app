@@ -9,6 +9,13 @@
   background: #e6f1ff;
 }
 
+.routine-banner {
+  height: 10em;
+  width: 100%;
+  background-image: linear-gradient(45deg, darkgreen, lightgreen);
+  border-bottom: 1px solid lightgrey;
+}
+
 .edit_routine {
   margin-left: 25%;
   box-shadow: 5px 5px 2px 1px #937d62;
@@ -18,15 +25,20 @@
 }
 
 .routine-list {
-  box-shadow: 5px 5px 2px 1px #937d62;
-  padding: 1em;
-  background: white;
-  margin-left: 25%;
-  margin-right: 25%;
+  padding: 2em;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  min-height: 30em;
+}
+
+.routine-list h2 {
+  font-family: Montserat, sans-serif;
 }
 
 .routine-list li {
   padding: 10px;
+  list-style: none;
 }
 
 .routine-item-list {
