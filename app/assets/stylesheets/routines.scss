@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .new_routine {
+  box-shadow: 5px 5px 2px 1px #937d62;
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 5%;
@@ -30,8 +31,11 @@
   margin-left: 25%;
   box-shadow: 5px 5px 2px 1px #937d62;
   margin-right: 25%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   padding: 1em;
-  background: #e6f1ff;
+  background: #e0e0ff;
+  border-radius: 10px;
 }
 
 .routine-list {
