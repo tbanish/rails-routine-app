@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_07_09_195231) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "instruments", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_07_09_195231) do
     t.string "name"
     t.string "description"
     t.string "goal"
-    t.integer "routine_id", null: false
+    t.bigint "routine_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["routine_id"], name: "index_items_on_routine_id"
@@ -30,7 +33,7 @@ ActiveRecord::Schema.define(version: 2021_07_09_195231) do
 
   create_table "notes", force: :cascade do |t|
     t.string "content"
-    t.integer "item_id", null: false
+    t.bigint "item_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["item_id"], name: "index_notes_on_item_id"
@@ -38,8 +41,8 @@ ActiveRecord::Schema.define(version: 2021_07_09_195231) do
 
   create_table "routines", force: :cascade do |t|
     t.string "name"
-    t.integer "instrument_id", null: false
-    t.integer "user_id", null: false
+    t.bigint "instrument_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["instrument_id"], name: "index_routines_on_instrument_id"
@@ -62,6 +65,5 @@ ActiveRecord::Schema.define(version: 2021_07_09_195231) do
 
   add_foreign_key "items", "routines"
   add_foreign_key "notes", "items"
-  add_foreign_key "routines", "instruments"
   add_foreign_key "routines", "users"
 end
